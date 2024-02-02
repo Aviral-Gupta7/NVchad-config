@@ -31,8 +31,21 @@ local plugins = {
   },
   {
     "mfussenegger/nvim-dap",
-    config = function (_, _)
+    config = function (_, opts)
       require("core.utils").load_mappings("dap")
+    end
+  },
+  {
+    "mfussenegger/nvim-dap-python",
+    ft = "python",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "rcarriga/nvim-dap-ui",
+    },
+    config = function (_, opts)
+      local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
+      require("dap-python").setup(path)
+      require("core.utils").load_mappings("dap-python")
     end
   },
   {
@@ -42,7 +55,6 @@ local plugins = {
       return require "custom.configs.null-ls"
     end,
   },
-
   {
     "neovim/nvim-lspconfig",
     config = function ()
@@ -57,7 +69,11 @@ local plugins = {
         "clangd",
         "clang-format",
         "codelldb",
-        "python-lsp-server",
+        "pyright",
+        "mypy",
+        "ruff",
+        "black",
+        "debugpy",
       }
     }
   }
