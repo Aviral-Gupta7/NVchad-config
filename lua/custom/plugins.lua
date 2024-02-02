@@ -57,6 +57,7 @@ local plugins = {
         "clangd",
         "clang-format",
         "codelldb",
+        "python-lsp-server",
       }
     }
   }
