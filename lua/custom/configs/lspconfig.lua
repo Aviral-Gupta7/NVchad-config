@@ -17,3 +17,38 @@ lspconfig.pyright.setup{
   capabilities = capabilities,
   filetypes = {"python"},
 }
+
+lspconfig.emmet_language_server.setup({
+  filetypes = {
+    "astro",
+    "css",
+    "eruby",
+    "html",
+    "javascript",
+    "javascriptreact",
+    "less",
+    "php",
+    "pug",
+    "sass",
+    "scss",
+    "typescriptreact"
+  },
+  init_options = {
+    --- @type string[]
+    excludeLanguages = {},
+    --- @type string[]
+    extensionsPath = {},
+    --- @type table<string, any> [Emmet Docs](https://docs.emmet.io/customization/preferences/)
+    preferences = {},
+    --- @type boolean Defaults to `true`
+    showAbbreviationSuggestions = true,
+    --- @type "always" | "never" Defaults to `"always"`
+    showExpandedAbbreviation = "always",
+    --- @type boolean Defaults to `false`
+    showSuggestionsAsSnippets = false,
+    --- @type table<string, any> 
+    syntaxProfiles = {},
+    --- @type table<string, string>
+    variables = {},
+  },
+})

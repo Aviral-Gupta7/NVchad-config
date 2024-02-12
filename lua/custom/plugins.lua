@@ -74,6 +74,7 @@ local plugins = {
         "ruff",
         "black",
         "debugpy",
+        "emmet-language-server",
       }
     }
   }
