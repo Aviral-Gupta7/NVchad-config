@@ -75,6 +75,7 @@ local plugins = {
         "black",
         "debugpy",
         "emmet-language-server",
+        "prettier"
       }
     }
   }

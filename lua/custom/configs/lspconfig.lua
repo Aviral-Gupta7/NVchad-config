@@ -18,20 +18,26 @@ lspconfig.pyright.setup{
   filetypes = {"python"},
 }
 
+lspconfig.tsserver.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {
+    "javascript",
+    "typescript",
+  }
+}
+
 lspconfig.emmet_language_server.setup({
   filetypes = {
     "astro",
     "css",
     "eruby",
     "html",
-    "javascript",
-    "javascriptreact",
     "less",
     "php",
     "pug",
     "sass",
     "scss",
-    "typescriptreact"
   },
   init_options = {
     --- @type string[]
@@ -52,3 +58,5 @@ lspconfig.emmet_language_server.setup({
     variables = {},
   },
 })
+
+
