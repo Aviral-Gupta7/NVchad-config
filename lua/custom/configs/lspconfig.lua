@@ -27,17 +27,24 @@ lspconfig.tsserver.setup{
   }
 }
 
+lspconfig.cssls.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {
+    "css",
+    "scss",
+    "less",
+  }
+}
+
 lspconfig.emmet_language_server.setup({
   filetypes = {
     "astro",
-    "css",
     "eruby",
     "html",
-    "less",
     "php",
     "pug",
     "sass",
-    "scss",
   },
   init_options = {
     --- @type string[]
