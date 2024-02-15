@@ -24,6 +24,8 @@ lspconfig.tsserver.setup{
   filetypes = {
     "javascript",
     "typescript",
+    "javascriptreact",
+    "typescriptreact"
   }
 }
 
@@ -45,6 +47,8 @@ lspconfig.emmet_language_server.setup({
     "php",
     "pug",
     "sass",
+    "javascriptreact",
+    "typescriptreact"
   },
   init_options = {
     --- @type string[]
